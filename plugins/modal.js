@@ -1,17 +1,18 @@
 function _createModal(options){
     const modal = document.createElement('div')
+    const destroyfault_width = '600px'
     modal.classList.add('vmodal')
 
     modal.insertAdjacentHTML('afterbegin',`
         <div class="modal-overlay">
-            <div class="modal-window">
+            <div class="modal-window" style="width: ${options.width || destroyfault_width}">
                 <div class = "modal-header">
-                    <span class="modal-title">Modal title</span>
+                    <span class="modal-title">${options.title || 'Окно'}</span>
+                    ${options.closebel ? `<span class="modal-close>&times;</span>"`: ''}
                     <span class="modal-close">&times;</span>
                 </div>
                 <div class="modal-body">
-                    <p>Lorem ipsum dolor sit.</p>
-                    <p>Lorem ipsum dolor sit.</p>
+                    ${options.content || ''}
                 </div>
                 <div class="modal-footer">
                     <button>Ok</button>

@@ -13,7 +13,7 @@
 }
 
 .vmodal.open .modal-window{
-    transform: translate(100px);
+    transform: translateY(100px);
 }
 
 .vmodal.open .modal-overlay{
@@ -21,7 +21,7 @@
 }
 
 .vmodal.hide .modal-window{
-    transform: translate(-200px);
+    transform: translateY(-400px);
 }
 
 .vmodal.hide .modal-overlay{
@@ -39,7 +39,7 @@
     right: 0;
     left: 0;
     bottom: 0;
-    background:   rgba(0,0,0, 0);
+    background:   rgba(0,0,0, .5);
     transition: background .2s ease-in;
 }
 .modal-window{
@@ -47,8 +47,10 @@
     border-radius: 5px;
     background: #fff;
     margin: 0 auto;
-    transform: translateY(-200px[]);
+    transform: translateY(-200px);
     transition: transform .2s ease-in;
+    margin: 0 auto;
+    height: 200px;
 }
 
 .modal-header{
